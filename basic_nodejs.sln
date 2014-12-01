@@ -3,7 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "lesson5.ts", "lesson5.ts\lesson5.ts.njsproj", "{9346C35C-FE9D-4557-A904-C9B22508CDB7}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9346C35C-FE9D-4557-A904-C9B22508CDB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9346C35C-FE9D-4557-A904-C9B22508CDB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9346C35C-FE9D-4557-A904-C9B22508CDB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9346C35C-FE9D-4557-A904-C9B22508CDB7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
