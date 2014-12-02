@@ -37,9 +37,12 @@
     <TypeScriptCompile Include="Scripts\typings\node\node.d.ts" />
     <TypeScriptCompile Include="server.ts" />
     <Content Include="package.json" />
+    <Content Include="public_html\hello.html" />
     <Content Include="README.md" />
+    <TypeScriptCompile Include="settings.ts" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="public_html\" />
     <Folder Include="Scripts\" />
     <Folder Include="Scripts\typings\" />
     <Folder Include="Scripts\typings\node\" />
