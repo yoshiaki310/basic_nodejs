@@ -1,38 +1,26 @@
-﻿var http: any = require('http');
-var fs: any = require('fs');
+﻿var http: any = require('http'),
+    fs: any = require('fs'),
+    ejs: any = require('ejs');
 
 var server: any = http.createServer();
 
 var httpMessage: string = 'Hello, World';
 var settings = require('./settings.ts');
-//  var msg: string;
+var template = fs.readFileSync(__dirname + '/public_html/hello.ejs', 'utf-8');
+
+var n: number = 0;
 
 server.on('request', function (req, res) {
-    fs.readFile(__dirname + '/public_html/hello.html', 'utf-8', function (err, data) {
-        if (err) {
-            res.writeHead(404, { 'Content-Type': 'text/plain' });
-            res.write('not found ....');
-            return res.end();
-        }
-
-        res.writeHead(200, { 'Content-Type': 'text/html' });
-        res.write(data);
-        res.end();
-
+    n++;
+    var data = ejs.render(template, {
+        title: 'helo',
+        content: '<strong>world !</strong>',
+        n: n,
     });
-    /*
-    switch (req.url) {
-        case '/about':
-            msg = 'about this page';
-            break;
-        case '/profile':
-            msg = 'about me';
-            break;
-        default:
-            msg = 'wrong';
-            break;
-    }
-    */
+    res.writeHead(200, { 'Content-Type': 'text/html' });
+    res.write(data);
+    res.end();
+
 });
 server.listen(settings.port, settings.server);
 console.log('server listening...');
