@@ -1,12 +1,12 @@
-﻿import http = require('http');
-var fs = require('fs');
+﻿var http: any = require('http');
+var fs: any = require('fs');
 
 var server: any = http.createServer();
 
-
 var httpMessage: string = 'Hello, World';
 var settings = require('./settings.ts');
-var msg: string;
+//  var msg: string;
+
 server.on('request', function (req, res) {
     fs.readFile(__dirname + '/public_html/hello.html', 'utf-8', function (err, data) {
         if (err) {
@@ -34,16 +34,6 @@ server.on('request', function (req, res) {
     }
     */
 });
-server.listen(settings.port,settings.server);
+server.listen(settings.port, settings.server);
 console.log('server listening...');
 
-
-
-/*
-import http = require('http');
-var port = process.env.port || 1337
-http.createServer(function (req, res) {
-    res.writeHead(200, { 'Content-Type': 'text/plain' });
-    res.end('Hello World\n');
-}).listen(port);
-*/
