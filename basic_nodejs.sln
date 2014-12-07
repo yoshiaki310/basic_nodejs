@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "lesson5.ts", "lesson5.ts\lesson5.ts.njsproj", "{9346C35C-FE9D-4557-A904-C9B22508CDB7}"
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "basic_nodejs", "lesson5.ts\basic_nodejs.njsproj", "{9346C35C-FE9D-4557-A904-C9B22508CDB7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
