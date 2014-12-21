@@ -1,4 +1,6 @@
-﻿var http: any = require('http'),
+﻿/// <reference path="Scripts\typings\node\node.d.ts" />
+
+var http: any = require('http'),
     fs: any = require('fs'),
     ejs: any = require('ejs'),
     qs: any = require('querystring');
