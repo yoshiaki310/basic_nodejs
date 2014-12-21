@@ -15,9 +15,22 @@ MongoClient.connect("mongodb://" + settings.host + "/" + settings.db, function (
             { name: "ueda", score: 10 },
             { name: "higuchi", score: 100 },
         ];
-        collection.insert(docs, function (err, result) {
-            console.dir(result);
+        /*
+        collection.find({ name: "taguchi" }).toArray(function (err, items) {
+            console.log(items);
         });
+        */
+
+        var stream = collection.find().stream();
+        stream.on("data", function (item) {
+            console.log(item);
+        });
+
+        stream.on("end", function () {
+            console.log("end loading");
+        });
+
+
     });
 
 });
